@@ -12,7 +12,7 @@ use Getopt::Long 0 ();
 use Test::Harness 0 ();
 use Tie::File 0 ();
 use Text::ParseWords 0 ();
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 my %re = (
   lib     => qr{\.(?:pm|pod)$},
@@ -230,7 +230,7 @@ __END__
 
 =head1 NAME
 
-Acme::Module::Build::Tiny - A tiny replacement for Module::Build
+Acme::Module::Build::Tiny - A tiny replacement for Module::Build (DEPRECATED)
 
 =head1 SYNOPSIS
 
@@ -245,6 +245,13 @@ Acme::Module::Build::Tiny - A tiny replacement for Module::Build
   # That's it!
 
 =head1 DESCRIPTION
+
+=head2 Deprecated
+
+B<NOTE: This module is deprecated>.  See L<Module::Build::Tiny> instead,
+which builds upon this Acme proof of concept.
+
+=head2 Original Description
 
 Many Perl distributions use a Build.PL file instead of a Makefile.PL file
 to drive distribution configuration, build, test and installation.
@@ -359,4 +366,5 @@ it under the same terms as Perl itself, either Perl version 5.10.0 or,
 at your option, any later version of Perl 5 you may have available.
 
 =cut
+
 # vi:et:sts=2:sw=2:ts=2
