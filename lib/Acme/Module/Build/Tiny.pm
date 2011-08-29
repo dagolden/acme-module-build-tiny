@@ -65,7 +65,8 @@ sub run {
              : $ARGV[0] =~ /\A\w+\z/ ? $ARGV[0]
              : 'build';
   _get_options($action, $opt);
-  __PACKAGE__->can($action)->(%$opt) or exit 1;
+  my $fcn = __PACKAGE__->can($action) or die "$action not implemented\n";
+  $fcn->(%$opt);
 }
 
 sub debug {
