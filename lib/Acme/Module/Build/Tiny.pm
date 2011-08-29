@@ -208,8 +208,8 @@ sub _write_meta {
   $meta->{generated_by} = sprintf("%s version %s", __PACKAGE__, $VERSION);
   $meta->{'meta-spec'} = { version => 1.4, url => 'http://module-build.sourceforge.net/META-spec-v1.4.html' };
   $meta->{'license'} = 'perl';
-  require Module::Build::YAML;
-  Module::Build::YAML::DumpFile($file,$meta);
+  require CPAN::Meta::YAML;
+  CPAN::Meta::YAML::DumpFile($file,$meta);
 }
 
 sub _find_prereqs {
